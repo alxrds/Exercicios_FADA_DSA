@@ -227,7 +227,7 @@ ORDER BY ano_fiscal;
 #Reescrevendo a query anterior usando subquery
 SELECT ano_fiscal, nome_funcionario, COUNT(*) num_vendas_ano,
 (SELECT COUNT(*) FROM TB_VENDAS) as num_vendas_geral
-FROM cap06.TB_VENDAS
+FROM TB_VENDAS
 GROUP BY ano_fiscal, nome_funcionario
 ORDER BY ano_fiscal;
 
